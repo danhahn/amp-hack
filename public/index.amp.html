@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <title>View All Designer Handbags, Backpacks & Luggage | Michael Kors</title>
+    <link rel="canonical" href="https://www.michaelkors.com/handbags/view-all-handbags/_/N-283i">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
@@ -60,6 +61,7 @@
           url("css/fonts/Gotham-Light.woff") format("woff");
     }
     body {
+      margin: 0;
       font-family: Gotham Light;
       font-weight: 400;
       color: #0a0a0a;
@@ -83,7 +85,7 @@
     .brand-header {
       display: grid;
       grid-template-columns: 62px 1fr 25px 37px;
-      padding: 20px 12px;
+      padding: 12px;
       border-bottom: 1px solid #d1d1d1;
     }
     .logo {
@@ -121,13 +123,23 @@
 
     .filter-box {
       text-align: center;
+    }
+    .filter-box a {
       font-family: 'Gotham Light';
+      font-size: 1.5rem
     }
     .refine-box {
       border: 1px solid #d1d1d1;
       padding: 17px;
       margin: 0 12px;
       text-align: center;
+      font-family: 'Gotham Medium';
+      font-size: .75rem;
+    }
+    .filter-box a,
+    .refine-box a {
+      color: #0a0a0a;
+      text-decoration: none;
     }
     .refine-box p {
       margin: 0;
@@ -165,7 +177,7 @@
       padding: 0;
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(3, 25px)
+      grid-template-columns: repeat(auto-fit, 25px)
     }
     .swatch {
       width: 13px;
@@ -173,15 +185,81 @@
       border-radius: 50%;
       border: 1px solid gray;
       box-shadow: 0 0 0 2px white, 0 0 0 3px gray;
+      overflow: hidden;
+    }
+    .swatch-img {
+      margin-left: -1px;
     }
     .promo {
       font-family: 'Gotham Book';
       background-color: black;
       color: white;
-      font-size: 11px;
+      font-size: 9px;
+      padding: 10px;
+      line-height: normal;
     }
     .promo p {
       margin: 0;
+      max-width: 220px;
+      margin: 0 auto;
+      text-align: center;
+      letter-spacing: .9px;
+    }
+    .promo a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #sidebar {
+      margin-top: 120px;
+      background-color: #fff;
+
+    }
+    .i-amphtml-sidebar-mask {
+      top: 120px!important;
+      opacity: .8!important;
+    }
+    .nav-bar {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .nav-bar a {
+      color: black;
+      font-family: 'Gotham Medium';
+      padding: 1em;
+      display: block;
+      border-bottom: 1px solid #d1d1d1;
+      width: 400px;
+      text-decoration: none;
+      font-size: 12px;
+      position: relative;
+    }
+    .nav-bar a::after {
+      transform: translateY(-50%);
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 138px;
+      top: 50%;
+      font-family: MK-IconFont;
+      content: "\E90B";
+    }
+    .search-box a {
+      color: black;
+      text-decoration: none;
+    }
+    .footer-links {
+      padding: 12px;
+      border-top: 1px solid #707070;
+    }
+    .footer-links a {
+      display: inline-block;
+      font: .75rem 'Gotham Book';
+      color: #707070;
+      padding-right: 22px;
+      text-decoration: none;
     }
   </style>
   </head>
@@ -190,91 +268,222 @@
       <p class="pphMessageContent">ENJOY 25% OFF ALREADY-REDUCED STYLES. PRICES AS MARKED. <a href="/sale/view-all-sale/_/N-28zn" class="pphMessageLink" data-icid="Shop Now">SHOP NOW</a></p>
     </div>
     <header class="brand-header">
-      <div class="hb"></div>
+      <div class="hb" on="tap:sidebar.toggle"></div>
       <div class="logo">
-        <amp-img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Michael_Kors_Logo.svg" width="130" height="15" class="logo" />
+        <a href="http://www.michaelkors.com"><amp-img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Michael_Kors_Logo.svg" width="130" height="15" class="logo" /></a>
       </div>
-      <div class="search-icon">
+      <div class="search-box">
+        <a href="https://www.michaelkors.com/search/_/N-0/Ntt-"><span class="search-icon"></span></a>
       </div>
       <div class="shopping-cart">
-        <amp-img src="images/shopping-cart.png" width="17" height="21"></amp-img>
+        <a href="https://www.michaelkors.com/checkout/shoppingCart.jsp"><amp-img src="images/shopping-cart.png" width="17" height="21"></amp-img></a>
       </div>
     </header>
     <div class="filter-box">
-      <h2>VIEW ALL HANDBAGS</h2>
+      <h2><a href="https://www.michaelkors.com/handbags/view-all-handbags/_/N-283i">VIEW ALL HANDBAGS</a></h2>
     </div>
     <div class="refine-box">
-      <p>REFINE BY +</p>
+      <p><a href="https://www.michaelkors.com/handbags/view-all-handbags/_/N-283i">REFINE BY +</a></p>
     </div>
-    <ul class="grid">
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-        <ul class="product-info">
-          <li class="brand"><a aria-label="" href="https://www.michaelkors.com/whitney-large-embellished-leather-shoulder-bag/_/R-US_30T8GXIL3U">michael michael kors</a></li>
-          <li class="desc">
-            <a aria-label="" href="https://www.michaelkors.com/whitney-large-embellished-leather-shoulder-bag/_/R-US_30T8GXIL3U">Whitney Large Embellished Leather Shoulder Bag</a>
+      <ul class="grid">
+          <li>
+              <a href="">
+                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8GXIL3U-1587_IS?$categoryMediumNew$" width="170"
+                           height="228" class="img"></amp-img>
+                  <ul class="product-info">
+                      <li class="brand"><a aria-label=""
+                                           href="https://www.michaelkors.com/whitney-large-embellished-leather-shoulder-bag/_/R-US_30T8GXIL3U">michael
+                          michael kors</a></li>
+                      <li class="desc">
+                          <a aria-label="" href="https://www.michaelkors.com/whitney-large-embellished-leather-shoulder-bag/_/R-US_30T8GXIL3U">Whitney
+                              Large Embellished Leather Shoulder Bag</a>
+                      </li>
+                      <li class="price">$379.00</li>
+                      <ul class="swatches">
+                          <li>
+                              <div class="swatch">
+                                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXILIL-0001_swatch?$swatch$" width="15"
+                                           height="15" class="swatch-img"></amp-img>
+                              </div>
+                          </li>
+                      </ul>
+                  </ul>
+              </a>
           </li>
-          <li class="price">$379.00</li>
-          <ul class="swatches">
-            <li>
-              <div class="swatch" style="background-color: red"></div>
-            </li>
-            <li>
-              <div class="swatch" style="background-color: red"></div>
-            </li>
-            <li>
-              <div class="swatch" style="background-color: red"></div>
-            </li>
-          </ul>
-        </ul>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
-      </a>
-    </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIL1T-2263_IS?$categoryMediumNew$" width="170"
+                           height="228" class="img"></amp-img>
+                  <ul class="product-info">
+                      <li class="brand"><a aria-label=""
+                                           href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">michael
+                          michael kors</a></li>
+                      <li class="desc">
+                          <a aria-label="" href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">Whitney
+                              Large Embellished Leather Shoulder Bag</a>
+                      </li>
+                      <li class="price">$378.00</li>
+                      <ul class="swatches">
+                          <li>
+                              <div class="swatch">
+                                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIL1T-2263_swatch?$swatch$" width="15"
+                                           height="15" class="swatch-img"></amp-img>
+                              </div>
+                          </li>
+                      </ul>
+                  </ul>
+              </a>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIM1L-0001_IS?$categoryMediumNew$" width="170"
+                           height="228" class="img"></amp-img>
+                  <ul class="product-info">
+                      <li class="brand"><a aria-label=""
+                                           href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">michael
+                          michael kors</a></li>
+                      <li class="desc">
+                          <a aria-label="" href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">Whitney Mini Leather Satchel</a>
+                      </li>
+                      <li class="price">228.00</li>
+                      <ul class="swatches">
+                          <li>
+                              <div class="swatch">
+                                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIM1L-0001_swatch?$swatch$" width="15"
+                                           height="15" class="swatch-img"></amp-img>
+                              </div>
+                          </li>
+                      </ul>
+                  </ul>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30S8GN1T3L-0001_IS?$categoryMediumNew$" width="170"
+                           height="228" class="img"></amp-img>
+                  <ul class="product-info">
+                      <li class="brand"><a aria-label=""
+                                           href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">michael
+                          michael kors</a></li>
+                      <li class="desc">
+                          <a aria-label="" href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">Whitney Large Leather Tote</a>
+                      </li>
+                      <li class="price">298.00</li>
+                      <ul class="swatches">
+                          <li>
+                              <div class="swatch">
+                                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30S8GN1T3L-2297_swatch?$swatch$" width="15"
+                                           height="15" class="swatch-img"></amp-img>
+                              </div>
+                          </li>
+
+                              <li>
+                                <div class="swatch">
+                                    <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30S8GN1T3L-1999_swatch?$swatch$" width="15"
+                                             height="15" class="swatch-img"></amp-img>
+                                </div>
+                              </li>
+
+
+                              <li>
+                                <div class="swatch">
+                                    <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30S8GN1T3L-1684_swatch?$swatch$" width="15"
+                                             height="15" class="swatch-img"></amp-img>
+                                </div>
+                              </li>
+
+
+                              <li>
+                                <div class="swatch">
+                                    <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30S8GN1T3L-1714_swatch?$swatch$" width="15"
+                                             height="15" class="swatch-img"></amp-img>
+                                </div>
+                              </li>
+
+                          </li>
+                      </ul>
+                  </ul>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIM1L-0001_IS?$categoryMediumNew$" width="170"
+                           height="228" class="img"></amp-img>
+                  <ul class="product-info">
+                      <li class="brand"><a aria-label=""
+                                           href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">michael
+                          michael kors</a></li>
+                      <li class="desc">
+                          <a aria-label="" href="whitney-small-leather-shoulder-bag/_/R-US_30T8SXIL1T">Whitney Mini Leather Satchel</a>
+                      </li>
+                      <li class="price">228.00</li>
+                      <ul class="swatches">
+                          <li>
+                              <div class="swatch">
+                                  <amp-img src="https://michaelkors.scene7.com/is/image/MichaelKors/30T8SXIM1L-0001_swatch?$swatch$" width="15"
+                                           height="15" class="swatch-img"></amp-img>
+                              </div>
+                          </li>
+                      </ul>
+                  </ul>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
+              </a>
+          </li>
+          <li>
+              <a href="">
+                  <amp-img src="https://picsum.photos/170/228" width="170" height="228" class="img"></amp-img>
+              </a>
+          </li>
+      </ul>
   </ul>
+  <div class="footer-links" data-reactid="2218">
+    <section class="Additional_FooterLinks" data-reactid="2219">
+      <p class="copyright" data-reactid="2220"><!-- react-text: 2221 -->©<!-- /react-text --><!-- react-text: 2222 -->2018<!-- /react-text --><!-- react-text: 2223 -->&nbsp;Michael Kors<!-- /react-text --></p>
+      <p class="policy internal-link" data-reactid="2224">
+        <a href="/info/privacy-policy/s11400079" target="" class="policy internal-link" title="Privacy Policy" data-reactid="2225">Privacy Policy</a>
+      </p>
+      <p class="conditions internal-link" data-reactid="2226">
+        <a href="/info/terms-conditions/s11400082" target="" class="conditions internal-link" title="Terms &amp; Conditions" data-reactid="2227">Terms &amp; Conditions</a>
+      </p>
+      <p class="cookies internal-link" data-reactid="2228"><a href="/info/cookies/s11400076" target="" class="cookies internal-link" title="Cookies/Ad Choices" data-reactid="2229">Cookies/Ad Choices</a></p>
+      <p class="cobrowse-link" data-reactid="2230"><a href="javascript:void(0)" target="" class="cobrowse-link" title="Start CoBrowse" data-reactid="2231">Start CoBrowse</a></p>
+    </section>
+  </div>
+  <amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="left">
+    <ul class="nav-bar">
+      <li><a href="">WOMEN</a></li>
+      <li><a href="">MEN</a></li>
+      <li><a href="">COLLECTION</a></li>
+      <li><a href="">HANDBAGS</a></li>
+      <li><a href="">SHOES</a></li>
+      <li><a href="">WATCHES</a></li>
+      <li><a href="">ACCESSORIES</a></li>
+      <li><a href="">GIFTS</a></li>
+      <li><a href="">SALE</a></li>
+      <li><a href="">DESTINATION KORS</a></li>
+    </ul>
+  </amp-sidebar>
   </body>
 </html>
